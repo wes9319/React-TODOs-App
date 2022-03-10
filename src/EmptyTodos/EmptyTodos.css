@@ -1,0 +1,15 @@
+.EmptyTodos {
+  text-align: center;
+  color: #e2e2e2;
+  margin-top: 25%;
+}
+
+img {
+  width: 60px;
+  height: 60px;
+}
+
+p:nth-child(2) {
+  font-size: x-large;
+  font-weight: bolder;
+}

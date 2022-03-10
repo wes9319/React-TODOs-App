@@ -1,0 +1,29 @@
+.Icon-container {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 48px;
+  width: 48px;
+}
+
+.Icon-container--check,
+.Icon-container--checkDone {
+  position: absolute;
+  left: 12px;
+}
+
+.Icon-container--delete {
+  position: absolute;
+  right: 8px;
+}
+
+.Icon {
+  width: 48px;
+  height: 48px;
+  transition: fill .15s;
+}
+
+.Icon-container:hover .Icon--delete{
+  transform: scale(0.9);
+}

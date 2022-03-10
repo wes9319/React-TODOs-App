@@ -1,0 +1,10 @@
+.TodoError {
+  color: #e2e2e2;
+  text-align: center;
+  margin-top: 25%;
+}
+
+.TodoError-p {
+  font-size: larger;
+  font-weight: bolder;
+}
