@@ -7,12 +7,12 @@ function CreateTodoButton(props) {
   }
 
   return (
-    <button 
+    <span 
       className='CreateTodoButton'
       onClick={onClickButton}
     >
       +
-    </button>
+    </span>
   )
 }
 
