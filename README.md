@@ -1,10 +1,6 @@
 # Welcome to TODOs App by wes9319
 
-This project was created
-
-# Getting Started with Create React App
-
-This project made with React manages personal TODOs:
+This project was made with React manages personal TODOs:
 
 * Add new TODOs
 * Complete TODOs
