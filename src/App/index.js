@@ -1,6 +1,5 @@
-// import './App.css';
 import React from 'react'; 
-import { TodoProvider } from '../TodoContext';
+import { useTodos } from './useTodos';
 import { TodoWelcome } from "../TodoWelcome";
 import { TodoCounter } from "../TodoCounter";
 import { TodoSearch } from "../TodoSearch";
@@ -29,7 +28,8 @@ function App() {
     completedTodos,
     searchValue,
     setSearchValue,
-  } = React.useContext(TodoContext);
+    addTodo,
+  } = useTodos();
 
   return (
     <>
@@ -64,7 +64,10 @@ function App() {
 
       {!!openModal && (
         <Modal>
-          <TodoForm/>
+          <TodoForm 
+            addTodo={addTodo}
+            setOpenModal={setOpenModal}
+          />
         </Modal>
       )}
 
