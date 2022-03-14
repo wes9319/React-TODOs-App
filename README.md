@@ -7,7 +7,7 @@ This project was made with React, it manages personal TODOs:
 * Delete TODOs
 * Search TODOs
 
-All the data persist on the user's browser taking advantage of localStorage.
+All the data persist on the user's browser taking advantage of localStorage and custom React Hooks.
 
 The App is built & optimized for mobile.
 
