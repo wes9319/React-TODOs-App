@@ -24,3 +24,7 @@
   /* outline-color: #61DAFA; */
   box-shadow: 0px 5px 50px rgba(190, 192, 197, 0.80);
 }
+
+.TodoSearch:disabled {
+  opacity: 25%;
+}

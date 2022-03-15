@@ -5,3 +5,7 @@
   /* color: white; */
   color: #e2e2e2;
 }
+
+.TodoWelcome--loading{
+  opacity: 25%;
+}

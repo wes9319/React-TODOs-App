@@ -6,3 +6,7 @@
   /* color: white; */
   color: #e2e2e2;
 }
+
+.TodoCounter--loading {
+  opacity: 25%;
+}

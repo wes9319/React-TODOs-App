@@ -1,9 +1,11 @@
 import React from 'react';
 import './TodoWelcome.css';
 
-function TodoWelcome() {
+function TodoWelcome({ loading }) {
   return (
-    <h1 className='TodoWelcome'>🎉 Welcome back 🎉</h1>
+    <h1 className={`TodoWelcome ${!!loading && "TodoWelcome--loading"}`}>
+      🎉 Welcome back 🎉
+    </h1>
   )
 }
 
