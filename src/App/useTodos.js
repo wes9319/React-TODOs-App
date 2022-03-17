@@ -9,6 +9,7 @@ function useTodos() {
     saveItem: saveTodos,
     loading,
     error,
+    sync: syncTodos,
   } = useLocalStorage('TODOS_V1', []);
 
   const [openModal, setOpenModal] = React.useState(false);
@@ -67,6 +68,7 @@ function useTodos() {
       addTodo,
       openModal,
       setOpenModal,
+      syncTodos,
     }
   )
 }

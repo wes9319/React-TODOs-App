@@ -12,6 +12,7 @@ import { TodoError } from '../TodoError';
 import { TodoLoading } from '../TodoLoading';
 import { EmptyTodos } from '../EmptyTodos';
 import { TodoHeader } from '../TodoHeader';
+import { ChangeAlertWithStorageListener } from '../ChangeAlert';
 
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
     searchValue,
     setSearchValue,
     addTodo,
+    syncTodos,
   } = useTodos();
 
   return (
@@ -80,6 +82,10 @@ function App() {
 
       <CreateTodoButton
         setOpenModal={setOpenModal}
+      />
+
+      <ChangeAlertWithStorageListener 
+        syncTodos={syncTodos}
       />
     </>
   );
