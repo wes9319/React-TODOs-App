@@ -11,8 +11,9 @@ import { TodoForm } from '../TodoForm';
 import { TodoError } from '../TodoError';
 import { TodoLoading } from '../TodoLoading';
 import { EmptyTodos } from '../EmptyTodos';
+import { NoResultTodos } from '../NoResultTodos';
 import { TodoHeader } from '../TodoHeader';
-import { ChangeAlertWithStorageListener } from '../ChangeAlert';
+import { ChangeAlert } from '../ChangeAlert';
 
 
 function App() {
@@ -57,7 +58,7 @@ function App() {
         onLoading={() => <TodoLoading/>}
         onEmptyTodos={() => <EmptyTodos/>}
         onEmptySearchResults={
-          (searchText) => <p>No results for {searchText}</p>
+          (searchText) => <NoResultTodos searchText={searchText}/>
         }
       >
         {todo => (
@@ -84,7 +85,7 @@ function App() {
         setOpenModal={setOpenModal}
       />
 
-      <ChangeAlertWithStorageListener 
+      <ChangeAlert
         syncTodos={syncTodos}
       />
     </>

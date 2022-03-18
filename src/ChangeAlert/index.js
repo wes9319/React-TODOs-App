@@ -1,16 +1,25 @@
 import React from 'react';
-import { withStorageListener } from './withStorageListener';
+import { useStorageListener } from './useStorageListener';
+import './ChangeAlert.css';
 
-function ChangeAlert({show, toggleShow}) {
+function ChangeAlert({ syncTodos }) {
+  const {show, toggleShow} = useStorageListener(syncTodos);
+  
   if(show){
     return (
-      <div>
-        <p>There are recent changes</p>
-        <button
-          onClick={() => toggleShow(false)}
-        >
-          Reload Page
-        </button>
+      <div className='ChangeAlert-bg'>
+        <div className='ChangeAlert-container'>
+          <p className='ChangeAlert-txt'>
+            There are recent changes. 
+            Please reload the page
+          </p>
+          <button
+            className='ChangeAlert-btn'
+            onClick={() => toggleShow(false)}
+          >
+            Reload Page
+          </button>
+        </div>
       </div>
     )
   } else {
@@ -18,6 +27,4 @@ function ChangeAlert({show, toggleShow}) {
   }
 }
 
-const ChangeAlertWithStorageListener = withStorageListener(ChangeAlert);
-
-export { ChangeAlertWithStorageListener };
+export { ChangeAlert };
